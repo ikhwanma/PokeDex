@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">PokeDex</string>
+    <string name="pokemon_name">Pokemon Name</string>
+    <string name="image">image</string>
+    <string name="title_home">Home</string>
+    <string name="title_testadd">Test Add</string>
 </resources>

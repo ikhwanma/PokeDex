@@ -18,6 +18,7 @@ abstract class BaseFragment<VM: ViewModel, VB: ViewBinding>: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        loadInjectionModule()
         _binding = getViewBinding()
         return binding.root
     }
@@ -26,6 +27,7 @@ abstract class BaseFragment<VM: ViewModel, VB: ViewBinding>: Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setUpView()
         setUpObserver()
+        setupListener()
     }
 
     override fun onDestroy() {
@@ -33,7 +35,9 @@ abstract class BaseFragment<VM: ViewModel, VB: ViewBinding>: Fragment() {
         _binding = null
     }
 
+    abstract fun loadInjectionModule()
     protected open fun setUpObserver(){}
+    protected open fun setupListener(){}
     protected open fun setUpView(){}
     abstract fun getViewBinding():VB
 }

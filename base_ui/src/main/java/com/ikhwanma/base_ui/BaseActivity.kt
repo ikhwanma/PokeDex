@@ -13,6 +13,7 @@ abstract class BaseActivity<VM: ViewModel, VB: ViewBinding>: AppCompatActivity()
     override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
         super.onCreate(savedInstanceState, persistentState)
         binding = getViewBinding()
+        loadInjectionModule()
         setContentView(binding.root)
     }
 
@@ -24,5 +25,6 @@ abstract class BaseActivity<VM: ViewModel, VB: ViewBinding>: AppCompatActivity()
 
     protected open fun setUpObserver(){}
     protected open fun setUpView(){}
+    abstract fun loadInjectionModule()
     abstract fun getViewBinding():VB
 }
