@@ -20,7 +20,6 @@
             <option value="$PROJECT_DIR$/core/network" />
             <option value="$PROJECT_DIR$/feature" />
             <option value="$PROJECT_DIR$/feature/pokemon" />
-            <option value="$PROJECT_DIR$/feature/testadd" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />

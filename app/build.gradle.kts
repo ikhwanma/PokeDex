@@ -42,7 +42,7 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
-    dynamicFeatures += setOf(":feature:pokemon", ":feature:testadd")
+    dynamicFeatures += setOf(":feature:pokemon")
 }
 
 dependencies {
